@@ -3,9 +3,9 @@ public class IsUnique {
     public static void main(String[] args) {
 
         IsUnique array = new IsUnique();
-        assert array.IsUniqueChars("abcd") == true;   
-        assert array.IsUniqueChars("abcda") == false; 
-        assert array.IsUnique_non_space("abcda") == false; 
+        array.IsUniqueChars("abcd") == true;   
+        array.IsUniqueChars("abcda") == false; 
+        array.IsUnique_non_space("abcda") == false; 
     
     }
     //Time O(N)

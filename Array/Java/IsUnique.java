@@ -3,9 +3,9 @@ public class IsUnique {
     public static void main(String[] args) {
 
         IsUnique array = new IsUnique();
-        assert array.IsUniqueChars("abcd") == true;   
-        assert array.IsUniqueChars("abcda") == false; 
-        assert array.IsUnique_non_space("abcda") == false; 
+        array.IsUniqueChars("abcd") ;   
+        array.IsUniqueChars("abcda") ; 
+        array.IsUnique_non_space("abcda"); 
     
     }
     //Time O(N)
@@ -60,7 +60,7 @@ public class IsUnique {
     {        
         char[] charArray = str.toCharArray();
         Arrays.sort(charArray);
-        for (int i = 1; i < charArray.length(); i++)
+        for (int i = 1; i < charArray.length; i++)
         {           
             if (charArray[i] == charArray[i-1])
             {

@@ -1,49 +1,44 @@
 
 # N
-def One_Away(s1,s2):
-    dict = {}
+def One_Away(s1,s2):    
     if len(s1) == len(s2):
-        for i in range(len(s1)):
-            if s1[i] != s2[i]:
-                if s1[i] in dict:
-                    dict[s1[i]] != s2[i]
-                    return False
-                elif len(dict) == 1:
-                    return False
-                else:
-                    dict[s1[i]] = s2[i]
-    else:
-        i = 0 
-        j = 0
-        disable_char = ""
-        while j < len(s2):
-            if s1[i] != s2[j]:                
-                if disable_char == "":
-                    disable_char = s1[i]
-                elif disable_char != s1[i]:
-                    return False    
-                i += 1              
-            else:
-                i += 1
-                j += 1
-        # if  j != len(s2) :    
-        #     return False
-     
+        return oneEditReplace(s1,s2)
+    elif len(s1) == len(s2) + 1  :
+        return oneEditlnsert(s1,s2)
+    elif len(s2) == len(s1) + 1  :
+        return oneEditlnsert(s2,s1)   
+    
+    return False
+    
+def oneEditReplace(s1,s2):
+    foundDifference = False
+    for i in range(len(s1)):
+        if s1[i] != s2[i]:
+            if foundDifference:
+                return False
+            foundDifference = True
+
     return True
     
-assert One_Away("paleaea","plee") == True	    
+def oneEditlnsert(s1,s2):
+    index1,index2 = 0,0
+    while index1 < len(s1) and index2 < len(s2):
+        if s1[index1] != s2[index1]:
+            if index1 != index2:
+               return False
+            index2 += 1
+        else:
+            index1 += 1
+            index2 += 1
+    return True   
     
-assert One_Away("palea","ple") == True	    
-	
-assert One_Away("palea","peb") == False	
-	
 assert One_Away("pale","ple") == True
 
-assert One_Away("pale","pale") == True
+assert One_Away("pales","pale") == True
 
 assert One_Away("pale","bale") == True
 
-assert One_Away("pale","bake") == False
+assert One_Away("pale","bae") == False
 
 
 

@@ -1,4 +1,4 @@
-# 1.6 String Rotation . .
+# 1.9 String Rotation . .
 
 ## Question
 Assume you have a method is Substring which checks if one word is a substring </br>
@@ -7,25 +7,21 @@ call to isSubstring (e.g., "waterbottle" is a rotation of "erbottlewat" ).</br>
 ## Solution
 
 Sol 1:
-``` java 
-    String compress(String str)
-    {
-        String compressedString = "";
-        int count = 0 ;
-        for (int i =0; i<str.length();i++)
-        {
-            count += 1;
-            if (i + 1 >=str.length()  || str.charAt(i) != str.charAt(i+1)){
-                compressedString += ""+ str.charAt(i) + count;
-                count = 0;
-            }
 
-        }
-
-        return str.length() <= compressedString.length() ? str:compressedString;
-    }
+``` python
+def isRotation(s1,s2):
+    if len(s1) != len(s2):
+        return False    
+   
+    for i in range(len(s2)):       
+        if s2[i:] + s2[:i] == s1:           
+            return True
+    return False
 ```
-
+Sol 2:  if s1 = xy = waterbottle, x = wat, y = erbottle,s2 = yx </br>
+        s1 + s1 = xyxy ,所以只要判斷 s2 是否在 s1+s1 </br>
+ 
+'''
 使用StringBuilder
 ``` java 
     String compress_stringbuilder(String str)

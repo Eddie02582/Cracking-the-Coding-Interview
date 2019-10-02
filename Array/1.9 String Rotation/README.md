@@ -1,10 +1,9 @@
-# 1.6 String Compression . .
+# 1.6 String Rotation . .
 
 ## Question
-Implement a method to perform basic string compression using the counts </br>
-of repeated characters. For example, the string aabcccccaaa would become a2blc5a3. If the </br>
-"compressed" string would not become smaller than the original string, your method should return </br>
-the original string. You can assume the string has only uppercase and lowercase letters (a - z). </br>
+Assume you have a method is Substring which checks if one word is a substring </br>
+of another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one </br>
+call to isSubstring (e.g., "waterbottle" is a rotation of "erbottlewat" ).</br>
 ## Solution
 
 Sol 1:

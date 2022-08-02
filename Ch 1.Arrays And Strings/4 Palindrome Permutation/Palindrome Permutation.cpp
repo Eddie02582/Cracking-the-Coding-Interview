@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
-#include <unordered_map>
-
+using namespace std;
 
 bool isPermutationOfPalindrome(const string &phrase){
     int letters_cnt [26] = {0};
@@ -16,18 +15,40 @@ bool isPermutationOfPalindrome(const string &phrase){
     }
     int odd_cnt = 0;
     for(int n : letters_cnt){
-        if(n % 2){
+        if(n % 2)
             odd_cnt += 1;
-        }
         if(odd_cnt >1)
             return false;
-        
     }
     return true;
 }
 
+bool isPermutationOfPallindrome2(const string &phrase){
+    int letters_cnt [26] = {0};
+    int odd_cnt = 0;
+    for(auto &c : phrase){
+        int index = -1;        
+        if(c <= 'z' && c >= 'a'){
+             index = c -'a';            
+        }
+        else if (c <= 'Z' && c >= 'A'){
+            index = c -'A';
+        }
+        if(index != -1){
+            letters_cnt [index]++;
+            if(letters_cnt [index] %2)
+                odd_cnt +=1;          
+            else
+               odd_cnt -=1;
+        }
+    }    
+    return odd_cnt <= 1;
+}
 
-bool isPermutationOfPalindrome_bit(const string &phrase){
+
+
+
+bool isPermutationOfPallindrome3(const string &phrase){
     int n = 0;
     for(auto &c : phrase){
         int val = c;
@@ -37,19 +58,33 @@ bool isPermutationOfPalindrome_bit(const string &phrase){
         else if (c <= 'Z' && c >= 'A'){
             n = n ^ ( 1 << (c -'A'));
         }
-    }    
-    cout << n << endl;
+    }       
     return (n &(n - 1)) == 0;
 }
 
-
-
-
 int main()
 {
+    std::string str("Tact Coa");
+    std::cout << "Does \"" << str << "\"  has a string whose permutation is a pallindrome? "
+              << "( 1 for true, 0 for false ) : " << std::endl;
+    std::cout << "Approach 1:" << isPermutationOfPalindrome( str )  << std::endl;
+    std::cout << "Approach 2:" << isPermutationOfPallindrome2( str ) << std::endl;
+    std::cout << "Approach 3:" << isPermutationOfPallindrome3( str ) << std::endl;
 
-    const string s = "Tact !Coa";  
-    cout << isPermutationOfPalindrome(s) <<endl;
-    cout << isPermutationOfPalindrome_bit(s) <<endl;
+
+    std::string str1("A big Cat");
+    std::cout << "Does \"" << str1 << "\" has a string whose permutation is a pallindrome? "
+              << "( 1 for true, 0 for false ) : " << std::endl;
+    std::cout << "Approach 1:" << isPermutationOfPalindrome( str1 ) << std::endl;
+    std::cout << "Approach 2:" << isPermutationOfPallindrome2( str1 ) << std::endl;
+    std::cout << "Approach 3:" << isPermutationOfPallindrome3( str1 ) << std::endl;
+
+
+    std::string str2("Aba cbc");
+    std::cout << "Does \"" << str2 << "\" has a string whose permutation is a pallindrome? "
+              << "( 1 for true, 0 for false ) : " << std::endl;
+    std::cout << "Approach 1:" << isPermutationOfPalindrome( str2 ) << std::endl;
+    std::cout << "Approach 2:" << isPermutationOfPallindrome2( str2 ) << std::endl;
+    std::cout << "Approach 3:" << isPermutationOfPallindrome3( str2 ) << std::endl;
     return 0;
 }

@@ -42,7 +42,7 @@ bool isPermutationOfPalindrome(const string &phrase){
 
 
 
-Sol 2:因為不分大小寫,最多26bit ,將每個數字轉換成2進位對應的數字,對每個數字用xor 邏輯閘(會將出現偶數次消除,最後判斷數字是否最多含有1個1<br>
+Sol 2:不分大小寫,最多26bit,將每個數字轉換成2進位對應的數字,對每個數字xor(會將出現偶數次消除),最後判斷數字是否最多含有1個1<br>
 Time:O(N) 
 
 ``` c++

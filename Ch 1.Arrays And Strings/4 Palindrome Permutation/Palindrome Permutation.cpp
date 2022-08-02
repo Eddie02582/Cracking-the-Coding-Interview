@@ -1,8 +1,6 @@
-
-
 #include <iostream>
-#include <cstring>
-
+#include <string>
+#include <unordered_map>
 
 
 bool isPermutationOfPalindrome(const string &phrase){
@@ -28,7 +26,8 @@ bool isPermutationOfPalindrome(const string &phrase){
     return true;
 }
 
-bool isPermutationOfPalindrome(const string &phrase){
+
+bool isPermutationOfPalindrome_bit(const string &phrase){
     int n = 0;
     for(auto &c : phrase){
         int val = c;
@@ -51,5 +50,6 @@ int main()
 
     const string s = "Tact !Coa";  
     cout << isPermutationOfPalindrome(s) <<endl;
+    cout << isPermutationOfPalindrome_bit(s) <<endl;
     return 0;
 }

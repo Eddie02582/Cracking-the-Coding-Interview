@@ -16,7 +16,7 @@ bool isPermutationOfPalindrome(const string &phrase){
     int odd_cnt = 0;
     for(int n : letters_cnt){
         if(n % 2)
-            odd_cnt += 1;
+            odd_cnt++;
         if(odd_cnt >1)
             return false;
     }
@@ -37,9 +37,9 @@ bool isPermutationOfPallindrome2(const string &phrase){
         if(index != -1){
             letters_cnt [index]++;
             if(letters_cnt [index] %2)
-                odd_cnt +=1;          
+                odd_cnt++;          
             else
-               odd_cnt -=1;
+               odd_cnt--;
         }
     }    
     return odd_cnt <= 1;

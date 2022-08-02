@@ -1,20 +1,10 @@
-# 1.4 Palindrome Permutation . .
-
-## Question
-Given a string, write a function to check if it is a permutation of a palindrome. </br>
-A palindrome is a word or phrase that is the same forwards and backwards. A permutation </br>
-is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. </br>
-
-EXAMPLE </br>
-Input: Tact Coa </br>
-Output: True (permutations: "taco cat". "atco cta". etc.) </br>
 
 
-## Solution
+#include <iostream>
+#include <cstring>
 
-Sol 1: 假設輸入皆為英文字母，如果是回文，表示最多只有1個字母個數是奇數
-Time:O(N)
-``` c++
+
+
 bool isPermutationOfPalindrome(const string &phrase){
     int letters_cnt [26] = {0};
     for(auto &c : phrase){
@@ -33,15 +23,11 @@ bool isPermutationOfPalindrome(const string &phrase){
         }
         if(odd_cnt >1)
             return false;
+        
     }
     return true;
 }
-```
 
-Sol 2:因為不分大小寫,最多26bit ,將每個數字轉換成2進位對應的數字,對每個數字用xor 邏輯閘(會將出現偶數次消除,最後判斷數字是否最多含有1個1
-Time:O(N) 
-
-``` c++
 bool isPermutationOfPalindrome(const string &phrase){
     int n = 0;
     for(auto &c : phrase){
@@ -57,5 +43,13 @@ bool isPermutationOfPalindrome(const string &phrase){
     return (n &(n - 1)) == 0;
 }
 
-```    
 
+
+
+int main()
+{
+
+    const string s = "Tact !Coa";  
+    cout << isPermutationOfPalindrome(s) <<endl;
+    return 0;
+}

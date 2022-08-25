@@ -4,9 +4,6 @@
 Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to O.<br>
 
 
-
-Leetcode
-
 ## Solution
 
 <a href= "https://leetcode.com/problems/set-matrix-zeroes/">Leetcode 73. Set Matrix Zeroes</a>

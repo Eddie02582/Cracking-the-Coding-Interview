@@ -105,7 +105,9 @@ bool isOneAway(string s1, string s2){
   
 }
 ```
-Sol 2:dp
+Sol 2:dp<br>
+
+<a href= "https://leetcode.com/problems/edit-distance/">Leetcode 72. Edit Distance</a>
 
 ```c++
 bool isOneAway(string s1, string s2){

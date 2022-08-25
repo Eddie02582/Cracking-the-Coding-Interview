@@ -8,7 +8,7 @@ Write an algorithm such that if an element in an MxN matrix is 0, its entire row
 Leetcode
 
 ## Solution
-Leetcode
+
 <a href= "https://leetcode.com/problems/set-matrix-zeroes/">Leetcode 73. Set Matrix Zeroes</a>
 
 ``` c++

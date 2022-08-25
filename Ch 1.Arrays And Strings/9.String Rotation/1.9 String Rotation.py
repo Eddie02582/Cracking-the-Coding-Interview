@@ -22,7 +22,7 @@ def isRotation_slice(s1,s2):
 '''
 def isRotation(s1,s2):
     if len(s1) == len(s2):
-        return s2 in (s1+s2)  
+        return s2 in (s1+s1)  
     return False
 
 

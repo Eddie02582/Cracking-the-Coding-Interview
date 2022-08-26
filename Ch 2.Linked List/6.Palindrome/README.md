@@ -1,11 +1,10 @@
 # 2.6 Palindrome . .
 
-## Question
+## Question(<a href = "https://leetcode.com/problems/palindrome-linked-list/">234. Palindrome Linked List</a>)
 ```
 Implement a function to check if a linked list is a palindrome
 ```
 ## Solution
-<a href = "https://leetcode.com/problems/palindrome-linked-list//">234. Palindrome Linked List</a>
 Sol:1
 
 ```c++

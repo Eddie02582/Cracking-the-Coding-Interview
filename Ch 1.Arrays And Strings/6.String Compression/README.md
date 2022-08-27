@@ -1,6 +1,6 @@
 # 1.6 String Compression . .
 
-## Question
+## Question(<a href = "https://leetcode.com/problems/string-compression/">Leetcode 443. String Compression</a>)
 Implement a method to perform basic string compression using the counts </br>
 of repeated characters. For example, the string aabcccccaaa would become a2blc5a3. If the </br>
 "compressed" string would not become smaller than the original string, your method should return </br>

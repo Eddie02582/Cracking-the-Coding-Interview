@@ -1,12 +1,12 @@
 # 1.7 Zero Matrix
 
-## Question
+## Question(<a href= "https://leetcode.com/problems/set-matrix-zeroes/">Leetcode 73. Set Matrix Zeroes</a>)
 Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to O.<br>
 
 
 ## Solution
 
-<a href= "https://leetcode.com/problems/set-matrix-zeroes/">Leetcode 73. Set Matrix Zeroes</a>
+
 
 ``` c++
 #include <iostream>

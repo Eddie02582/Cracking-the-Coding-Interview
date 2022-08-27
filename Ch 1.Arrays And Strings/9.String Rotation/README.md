@@ -1,12 +1,12 @@
 # 1.9 String Rotation . .
 
-## Question
+## Question(<a href= "https://leetcode.com/problems/rotate-string/">Leetcode 796. Rotate String</a>)
 Assume you have a method is Substring which checks if one word is a substring </br>
 of another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one </br>
 call to isSubstring (e.g., "waterbottle" is a rotation of "erbottlewat" ).</br>
 ## Solution
 
-<a href= "https://leetcode.com/problems/rotate-string/">Leetcode 796. Rotate String</a>
+
 
 
 

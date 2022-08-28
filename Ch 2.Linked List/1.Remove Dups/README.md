@@ -8,7 +8,7 @@ How would you solve this problem if a temporary buffer is not allowed?
 ## Solution
 
 Sol 1:<br>
-這邊使用dummy->next做為迴圈的條件,每次把值存入hashset,如果有重覆讓dummy->next只向dummy->next->next
+這邊使用dummy->next做為迴圈的條件,每次把值存入hashset,如果有重覆讓dummy->next指向dummy->next->next
 
 ``` c++
 // space complexity - O(n)
@@ -30,7 +30,7 @@ void removeDup(Node* head) {
 } 
 ```
 
-類似的做法,while 用curr,此時就必須儲存prev,當curr 已出現,必須讓prev只向curr->next,若沒有更新prev
+類似的做法,while 用curr,此時就必須儲存prev,當curr 已出現,必須讓prev指向curr->next
 
 ``` c++
 void removeDup(Node* head) {

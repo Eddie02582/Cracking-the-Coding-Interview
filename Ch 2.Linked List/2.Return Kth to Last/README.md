@@ -45,6 +45,7 @@ Sol 2:利用雙ptr,先讓prt1走k,最後同時讓ptr1和ptr2同時走,當ptr1走
 ```
 ex :
     head = 1->2->3->4->5, k = 2
+	
     1  -> 2 -> 3 - > 4 -> 5 ->nullptr
               ptr1
     prt2
@@ -52,8 +53,6 @@ ex :
                                 ptr1
                     prt2
 ```
-
-
 ``` c++
 
 Node * kthToLastIterative( Node * head, int k ) {

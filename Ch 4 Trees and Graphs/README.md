@@ -29,7 +29,7 @@ A perfect binary tree is one that is both full and complete
 ## Binary Tree Traversal
 
 
-###In-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-inorder-traversal/">Leetcode 94. Binary Tree Inorder Traversal)
+### In-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-inorder-traversal/">Leetcode 94. Binary Tree Inorder Traversal)
 
 ```c++
 /**
@@ -59,7 +59,7 @@ public:
 };
 ```
 
-###In-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-inorder-traversal/">Leetcode 94. Binary Tree Inorder Traversal)
+### In-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-inorder-traversal/">Leetcode 94. Binary Tree Inorder Traversal)
 
 ```c++
 /**
@@ -89,7 +89,7 @@ public:
 };
 ```
 
-###Pre-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-preorder-traversal/">Leetcode 144. Binary Tree Preorder Traversa)
+### Pre-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-preorder-traversal/">Leetcode 144. Binary Tree Preorder Traversa)
 Pre-order traversal visits the current node before its child nodes (hence the name "pre-order").
 ```c++
 /**
@@ -106,7 +106,7 @@ Pre-order traversal visits the current node before its child nodes (hence the na
 
 ```
 
-###Post-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-postorder-traversal/">Leetcode 145. Binary Tree Postorder Traversal)
+### Post-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-postorder-traversal/">Leetcode 145. Binary Tree Postorder Traversal)
 Post-order traversal visits the current node after its child nodes (hence the name "post-order").
 ```c++
 /**

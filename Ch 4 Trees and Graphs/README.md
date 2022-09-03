@@ -59,35 +59,6 @@ public:
 };
 ```
 
-### In-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-inorder-traversal/">Leetcode 94. Binary Tree Inorder Traversal</a>)
-
-```c++
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    vector<int>ans;
-    vector<int> inorderTraversal(TreeNode* root) {
-        if (root == NULL)
-            return {};   
-        inorderTraversal(root->left);
-        ans.push_back(root->val);
-        inorderTraversal(root->right); 
-        return ans;
-        
-    }
-   
-};
-```
 
 ### Pre-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-preorder-traversal/">Leetcode 144. Binary Tree Preorder Traversa</a>)
 Pre-order traversal visits the current node before its child nodes (hence the name "pre-order").

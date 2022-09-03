@@ -24,3 +24,101 @@ Full Binary Trees是Binary Tree 一種，其中每個節點都有零個或兩個
 ### Perfect Binary Trees
 A perfect binary tree is one that is both full and complete
 <img src = "perfect binary trees.PNG">
+
+
+## Binary Tree Traversal
+
+
+###In-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-inorder-traversal/">Leetcode 94. Binary Tree Inorder Traversal)
+
+```c++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int>ans;
+    vector<int> inorderTraversal(TreeNode* root) {
+        if (root == NULL)
+            return {};   
+        inorderTraversal(root->left);
+        ans.push_back(root->val);
+        inorderTraversal(root->right); 
+        return ans;
+        
+    }
+   
+};
+```
+
+###In-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-inorder-traversal/">Leetcode 94. Binary Tree Inorder Traversal)
+
+```c++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int>ans;
+    vector<int> inorderTraversal(TreeNode* root) {
+        if (root == NULL)
+            return {};   
+        inorderTraversal(root->left);
+        ans.push_back(root->val);
+        inorderTraversal(root->right); 
+        return ans;
+        
+    }
+   
+};
+```
+
+###Pre-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-preorder-traversal/">Leetcode 144. Binary Tree Preorder Traversa)
+Pre-order traversal visits the current node before its child nodes (hence the name "pre-order").
+```c++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+
+```
+
+###Post-Order Traversal(<a href= "https://leetcode.com/problems/binary-tree-postorder-traversal/">Leetcode 145. Binary Tree Postorder Traversal)
+Post-order traversal visits the current node after its child nodes (hence the name "post-order").
+```c++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+
+```

@@ -94,3 +94,148 @@ Post-order traversal visits the current node after its child nodes (hence the na
 
 ```
 
+## Graphs
+
+```c++
+class Graph
+{
+public:
+	int V;	// number of vertices
+	vector<int> *adj;  //adjacency list 
+	Graph(int V);
+	void addEdge(int x, int y);	
+};
+
+// Constructor
+Graph::Graph(int V)
+{
+	this->V=V;
+	this->adj = new vector<int>[V];
+}
+
+// add a directed edge from x to y
+void Graph::addEdge(int x, int y){
+	adj[x].push_back(y);
+}
+
+int main(){
+	
+    Graph g(6);	
+    g.addEdge(5, 2);
+    g.addEdge(5, 0);
+    g.addEdge(4, 0);
+    g.addEdge(4, 1);
+    g.addEdge(2, 3);
+    g.addEdge(3, 1);
+
+/*	
+	Test graph :
+
+	0 <---4---->1
+	^ 			^
+	|			|
+	|			|
+    5---->2---->3 
+
+*/
+```
+pythob 使用字典相對簡單
+```python 
+from collections import defaultdict  
+class Graph:  
+    def __init__(self): 
+        # default dictionary to store graph 
+        self.graph = defaultdict(list) 
+    
+    # to add an edge to graph 
+    def addEdge(self,u, v):     # to add an edge to graph 
+        self.graph[u].append(v)  
+```
+
+如果是string
+
+```c++
+class Node{
+    public:
+        string name;
+        vector<Node*> adj;  
+        Node(string name);
+        void addEdge(Node* node);	 
+};
+
+Node::Node(string name)
+{
+	this->name=name;	
+}
+
+void Node::addEdge(Node* node)
+{
+	adj.push_back(node);
+}
+
+
+class Graph
+{
+    public:	
+    	vector<Node*> adj;  //adjacency list 
+    	Graph();
+    	void addNode(Node* node);
+};
+Graph::Graph()
+{
+
+}
+
+// add a directed edge from x to y
+void Graph::addNode(Node* node){
+	adj.push_back(node);
+}
+
+
+
+
+/*	
+	Test graph :
+
+	a <---c---->b
+	^ 			^
+	|			|
+	|			|
+    d---->e---->f 
+
+*/
+
+int main()
+{
+    Node *a = new Node("a");
+    Node *b = new Node("b");
+    Node *c = new Node("c");
+    Node *d = new Node("d");
+    Node *e = new Node("e");
+    Node *f = new Node("f");
+    c->addEdge(a);
+    c->addEdge(b);
+    f->addEdge(b);
+    e->addEdge(f);
+    d->addEdge(e);
+    d->addEdge(a);
+    Graph graph;
+    graph.addNode(a);
+    graph.addNode(b);
+    graph.addNode(c);
+    graph.addNode(d);
+    graph.addNode(e);
+    graph.addNode(f);
+    return 0;
+}
+```
+
+
+
+
+
+
+
+
+
+

@@ -5,7 +5,7 @@
 Implement a MyQueue class which implements a queue using two stacks
 
 
-
+<a href = "https://leetcode.com/problems/implement-queue-using-stacks/solution/">Reference</a>
 ## Solution
 ``` c++
 class MyQueue {
